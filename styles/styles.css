@@ -1,0 +1,23 @@
+:root {
+  --color-primary-light-1: ;
+}
+
+body.dark-theme {
+  --color-bg-2: #202009;
+  --color-border-2: hsla(0, 0%, 100%, 0.12);
+  --color-text-1: hsla(0, 0%, 100%, 1);
+  --color-primary-light-1: #003060;
+  --color-bg-1: transparent;
+}
+
+body {
+  --color-bg-2: var(--color-bg-2);
+  --color-border-2: var(--color-border-2);
+  // --color-text-1: var(--color-text-1);
+  --color-primary-light-1: var(--color-primary-light-1);
+  --color-bg-1: var(--color-bg-1);
+}
+
+.index-bg {
+  background-color: var(--color-primary-light-1);
+}

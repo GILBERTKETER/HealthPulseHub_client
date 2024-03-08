@@ -1,0 +1,17 @@
+/* dark-mode.css */
+
+:root {
+  --color-bg-1: #1c1c1c; /* Dark background color */
+  --color-bg-2: #2c2c2c; /* Darker background color */
+  --color-bg-3: #303030; /* Dark background for tables */
+  --color-text-1: #ffffff; /* White text color */
+  --color-text-2: #cccccc; /* Light gray text color */
+  /* Add more dark mode colors as needed */
+}
+
+body.dark-mode {
+  background-color: var(--color-bg-1);
+  color: var(--color-text-1);
+}
+
+/* Add more styles for dark mode elements */

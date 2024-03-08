@@ -1,0 +1,830 @@
+
+body
+    // overflow: hidden
+    background-color: var(--color-bg-2)
+    //   background: #202009
+    border: 1px solid hsla(0, 0%, 100%, .12)
+    box-shadow: 0 1px 0 hsl(0deg 0% 100% / 12%)
+    color: hsla(0, 0%, 100%, .4)
+
+// Select all heading elements (h1, h2, h3, etc.)
+h1, h2, h3, h4, h5, h6
+  font-weight: bold
+
+//
+.login-flex
+    display: flex
+    align-content: center
+    justify-content: space-between
+    gap: 0
+    width: auto
+.flex-container
+  display: flex
+  items-center: center
+  justify-content: center
+  height: 100vh
+  background-color: #333 // Replace with your desired background color
+
+.google-button
+  px: 4
+  py: 2
+  border: 1px solid #ccc
+  display: flex
+  gap: 2
+  border-radius: 4px
+  text: slate-700
+  hover:
+    border: slate-400
+    text: slate-900
+    shadow: true
+  dark:
+    border: slate-700
+    text: slate-200
+    hover:
+      border: slate-500
+      text: slate-300
+
+  img
+    width: 6
+    height: 6
+    // LoginForm.scss
+
+.slide
+  position: absolute
+  width: 100%
+  height: 100%
+  object-fit: cover
+  opacity: 0
+  transition: opacity 1s ease-in-out
+  z-index: -1
+  filter: blur(1px)
+
+  &.active
+    opacity: 1
+    
+.holder
+
+    display: flex
+    alignItems: center
+    justifyContent: space-between
+    position: relative
+    gap: 0
+.login-container
+  overflow: hidden
+  color: hsla(0, 0%, 100%, .4)
+  margin: 0 auto
+  width: 400px
+  height: 100% !important
+  padding: 20px
+  border-radius: 4px
+  position: relative
+
+  .avatar-container
+    border-radius: 50%
+    width: 100%
+    height: auto
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .avatar
+      border-radius: 50%
+      width: 100px
+      height: 100px
+      margin: 0 auto
+
+  .health-title
+    margin-top: 20px
+
+  .login-form
+    border: 1px solid black
+    z-index: 1
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 10px
+    border-radius: 8px
+    background: var(--color-bg-3)
+
+    p
+      margin-bottom: 10px
+
+    .input-field
+      width: 100%
+
+    .input-icon
+      color: var(--color-text-2)
+
+    .eye-button
+      padding: 0
+      margin-left: 8px
+
+    .signin-button
+      width: 100%
+
+///
+a
+    cursor: pointer
+.saveBtn
+    position: absolute
+    right: 0px
+    bottom: 20px
+    color: green
+.healthtitle
+    color: var(--color-text-1)
+    text-align: center
+.tc
+    color: var(--color-text-2) !important
+    margin: 0 auto
+    text-align: center
+.appBody
+    margin: 100px auto
+    // border: 1px solid red
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    height: 48px
+    z-index: 2
+    box-sizing: border-box
+    padding: 10px
+    background-color: var(--color-bg-1)
+    color: var(--color-text-1)
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08)
+    a
+        color: var(--color-text-1)
+        text-decoration: none
+
+.main
+    width: 100vw
+    height: 100vh
+    position: absolute
+    left: 0
+    top: 0
+    background-color: var(--color-bg-2)
+    &:active
+        cursor: grab
+
+.aside
+    position: absolute
+    height: 100vh
+    right: 0
+    top: 0
+    z-index: 3
+    background: #fff
+    box-sizing: border-box
+    padding: 15px
+    width: 400px
+    overflow: auto
+    label
+        display: block
+
+.graph
+    background-image: radial-gradient(var(--color-fill-3) 1px, rgba(0, 0, 0, 0) 1px)
+    background-size: 12px 12px
+    width: 100vw
+    height: 100vh
+
+.table
+    background: var(--color-bg-3)
+    color: var(--color-text-2)
+    border: 1px solid var(--color-border-2)
+    margin: 4px
+    border-radius: var(--border-radius-medium)
+    overflow: hidden
+    // user-select: none
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08)
+
+    &:hover, &-selected
+        border: 1px solid rgb(var(--primary-6))
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.12)
+        .table-settings
+            opacity: 1
+
+    &:active,
+    &-title
+        cursor: default
+
+    &.editable
+        &:active,
+        .table-title
+            cursor: move
+
+    &-title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 8px
+        color: var(--color-text-1)
+        box-sizing: border-box
+        background: var(--color-fill-2)
+        font-weight: 600
+
+    &-settings
+        opacity: 0
+
+    &-name
+        max-width: 50%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+    &-comment
+        padding: 0 8px
+        font-size: 12px
+        color: var(--color-text-3)
+        background: var(--color-neutral-3)
+        &.no-comment
+            color: var(--color-text-4)
+            font-style: italic
+
+.row
+    position: relative
+    padding: 0 8px 0 20px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    border-top: 1px solid var(--color-border-2)
+    box-sizing: border-box
+    &:hover
+        opacity: .8
+    &.editable:hover
+        .field-type
+            display: none
+        .grip-setting
+            display: block
+        .grip-setting-btn
+            margin-left: 4px
+
+.field-content
+    display: flex
+    justify-content: space-between
+
+    .field-type
+        font-size: 12px
+        color: var(--color-text-3)
+        text-transform: lowercase
+
+.grip
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background: rgb(var(--primary-3))
+    position: absolute
+    right: 5px
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+
+.start-grip
+    right: auto
+    left: 5px
+
+.grip-setting
+    position: absolute
+    right: 5px
+    top: -1.5px
+    display: none
+
+.path-label
+    border: 1px solid var(--color-border-3)
+    background: var(--color-bg-3)
+    color: var(--color-text-1)
+    text-align: center
+    position: relative
+    z-index: 3
+    box-sizing: border-box
+    vertical-align: center
+    border-radius: 50%
+    padding: 0
+    width: 20px
+    height: 20px
+    line-height: 20px
+    font-size: 12px
+    font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto
+
+.path-line
+    stroke: var(--color-border-3)
+
+.table-tips
+    width: 240px
+    margin: -8px
+    .head
+        padding-bottom: 6px
+        margin-bottom: 6px
+        border-bottom: 1px solid var(--color-border-3)
+    .field-name
+        color: var(--color-text-1)
+        font-weight: 500
+    .field-type
+        margin-left: 8px
+        text-transform: lowercase
+        color: rgb(var(--orange-4))
+    .content
+        font-size: 12px
+    .field-item
+        display: flex
+        span
+            margin-right: 8px
+            color: var(--color-text-3)
+        .empty-value
+            color: var(--color-text-4)
+            font-style: italic
+
+.drawer-btns
+    position: fixed
+    bottom: 10px
+    left: 0
+    right: 0
+    display: flex
+    justify-content: space-around
+    button
+        width: 40%
+
+label
+    // user-select: none
+
+.left-table-nav
+    position: absolute
+    z-index: 101
+    width: 196px
+
+    padding: 8px 0 4px
+    left: 24px
+    top: 72px
+    background-color: var(--color-bg-5)
+    border-radius: 4px
+    box-shadow: 0 8px 24px 2px rgba(29, 41, 57, .14)
+    transition: all .2s
+
+    .table-nav-title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 2px 8px 8px 16px
+        color: var(--color-text-2)
+        font-weight: bold
+    .table-nav-content
+        border-top: 1px solid var(--color-neutral-3)
+        .table-nav-menu
+            max-height: calc(100vh - 160px)
+            overflow-y: auto
+        .table-nav-search
+            padding: 8px 8px 0
+    .table-nav-count
+        margin-left: 4px
+        font-style: italic
+    .table-filter
+        background-color: var(--color-primary-light-1) !important
+
+    .arco-menu-light,
+    .arco-menu-light .arco-menu-item
+        background-color: var(--color-bg-5)
+    .arco-menu-light .arco-menu-item:hover,
+    .arco-menu-light .arco-menu-item.arco-menu-selected
+        background-color: var(--color-fill-2)
+    .arco-btn-secondary:not(.arco-btn-disabled)
+        background-color: transparent
+
+.dragging
+    opacity: .3
+
+.dropping:after
+    content: ' '
+    display: block
+    width: 100%
+    height: 10px
+    margin-top: 10px
+    background: var(--color-primary-light-1)
+
+.flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.graph-container
+    display: flex
+    padding-top: 100px
+    // max-height: calc(100vh - 100px)
+    overflow-y: auto
+    background-color: var(--color-bg-2)
+    padding: 100px 2em
+    column-gap: 20px
+    .arco-list-wrapper
+        padding-bottom: 80px
+        &:first-child
+            width: 60%
+        &:last-child
+            width: 40%
+
+.graph-list-btns
+    width: 480px
+    margin: 0 auto
+    text-align: center
+
+.graph-list
+    max-width: 1024px
+    margin: 0 auto
+
+    .arco-list-header
+        background: var(--color-fill-2)
+
+.table-form
+    margin-bottom: 8px
+    .arco-form-item
+        margin-bottom: 0
+
+.table-form-item
+    width: 100%
+    justify-content: space-between
+    .arco-space-item
+        width: 50%
+
+.table-form-label
+    width: 55px
+    display: inline-block
+
+.custom-radio-card
+    padding: 10px 16px
+    border: 1px solid var(--color-border-2)
+    border-radius: 4px
+    width: 100%
+    box-sizing: border-box
+    cursor: pointer
+    margin-top: 8px
+    margin-bottom: 8px
+    position: relative
+
+.custom-radio-card-dot
+    height: 8px
+    width: 8px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+    border: 1px solid var(--color-border-2)
+    box-sizing: border-box
+
+.custom-radio-card-title
+    color: var(--color-text-1)
+    font-size: 14px
+    font-weight: bold
+    margin-bottom: 4px
+
+.custom-radio-card-secondary
+    color: var(--color-text-3)
+
+.custom-radio-card:hover,
+.custom-radio-card-checked,
+.custom-radio-card:hover .custom-radio-card-dot,
+.custom-radio-card-checked .custom-radio-card-dot
+    border-color: rgb(var(--primary-6))
+
+.custom-radio-card-checked
+    background-color: var(--color-primary-light-1)
+
+.custom-radio-card:hover .custom-radio-card-title,
+.custom-radio-card-checked .custom-radio-card-title,
+.custom-radio-card:hover .custom-radio-card-secondary,
+.custom-radio-card-checked .custom-radio-card-secondary
+    color: rgb(var(--primary-6))
+
+.custom-radio-card-checked .custom-radio-card-dot
+    background-color: rgb(var(--primary-6))
+
+.delete-btn
+    position: absolute
+    right: 2px
+    top: 0
+    padding: 8px
+    color: var(--color-text-3)
+    font-size: 12px
+    &:hover
+        color: rgb(var(--primary-6))
+
+.context-menu
+    width: 200px
+    .context-menu-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .context-menu-line
+        margin: 4px 0
+
+body[arco-theme=dark] .arco-home-key
+    background: #202009
+    border: 1px solid hsla(0, 0%, 100%, .12)
+    box-shadow: 0 1px 0 hsl(0deg 0% 100% / 12%)
+    color: hsla(0, 0%, 100%, .4)
+.arco-home-key
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 6px
+    width: 17.21px
+    height: 20px
+    left: 117px
+    top: 6px
+    background: #fff
+    border: 1px solid #c9cdd4
+    box-sizing: border-box
+    box-shadow: 0 1px 0 #c9cdd4
+    border-radius: 3px
+    font-size: 12px
+    color: var(--color-text-3)
+
+.index-bg
+    padding: 8rem 0 12rem 0
+    background-color: var(--color-primary-light-1)
+    background-image: url('/images/bg.svg')
+    background-size: cover
+    background-position: center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.mark
+    background-color: var(--color-primary-light-1)
+    width: auto
+.mark1
+    color: var(--color-text-2)
+.index-video-container
+    position: relative
+    overflow: hidden
+    video
+        height: 700px
+        width: 100%
+        top: 0
+        left: 0
+        filter: blur(2px) brightness(.5)
+        position: relative
+        z-index: 1
+        object-fit: cover
+
+    .faq
+        max-width: 1200px
+        width: 100%
+        left: 50%
+        transform: translate(-50%, -50%)
+        margin: 0 auto
+        position: absolute
+        top: 50%
+        z-index: 2
+        padding: 20px
+        border-radius: 4px
+        color: #fff
+        h2
+            font-size: 2rem
+            font-weight: bolder
+            margin-bottom: 1rem
+        dt
+            font-size: 1.5rem
+            font-weight: bolder
+            margin-bottom: 1rem
+
+        dd
+            font-size: 1.5rem
+            margin: 0 0 2rem 0
+
+.index-steps
+    margin: -10px 0 0 0
+    overflow: hidden
+    background-image: radial-gradient(rgba(0, 0, 0, .1) 1px, rgba(0, 0, 0, 0) 1px)
+    background-size: 12px 12px
+
+.index-footer
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex-direction: column
+    padding: 150px
+    margin: -10px 0 0 0
+    overflow: hidden
+    background: rgba(0, 0, 0, 0.1)
+    color: #666
+    &>div
+        color: #000
+        font-size: 1.5rem
+    a span
+        color: #666
+    button span
+        color: #666
+    button svg
+        color: #666
+
+// *********************/applications page***********************
+.graph
+    .app-content
+        display: flex
+        height: 100vh
+        width: 100vw
+        padding: 60px 20px
+        column-gap: 10px
+        .ac-sidenav-wrapper
+            display: flex
+            height: fit-content
+            width: 200px
+            background: var(--color-bg-1)
+            .acsw-content
+                display: flex
+                height: fit-content
+                width: 100%
+                justify-content: center
+                ul 
+                    display: flex
+                    height: fit-content
+                    width: 100%
+                    flex-direction: column
+                    list-style-type: none
+                    margin: 0px
+                    padding: 14px
+                    li 
+                        display: flex
+                        align-items: center
+                        justify-content: flex-start
+                        width: 100%
+                        height: 40px
+                        color: var(--color-text-1)
+        .ac-window
+            display: flex
+            width: 80%
+            height: 90%
+            background: var(--color-bg-1)
+            overflow: auto
+            .acw-content
+                display: flex
+                width: 100%
+                height: 100%
+                padding: 10px
+                .forms-wrapper
+                    display: flex
+                    height: 100%
+                    width: 100%
+                    .forms-col
+                        display: flex
+                        height: 100%
+                        width: 50%
+                        padding: 10px
+                        &:first-child
+                            border-right: 1px solid var(--color-bg-3)
+        &.form-builder
+            width: 100%
+            padding: 60px 0px 0px 0px
+            height: 100%
+            .ac-window
+                width: 100%
+                height: 100%
+                div:has(.react-form-builder)
+                    width: 100%
+                    .react-form-builder
+                        width: 100%
+                        > div
+                            display: flex
+                            .react-form-builder-preview
+                                    width: 60%
+                                    .form-place-holder-hidden
+                                        background: #c6c6c6
+                                        border: 1px dashed var(--color-border-2)
+                            .react-form-builder-toolbar
+                                    width: 40%
+                .acw-content
+                    
+                .acw-overflow
+                    height: fit-content
+                &.acw-query-builder
+                    padding: 10px
+                    flex-direction: column
+            .form-builder-utils
+                display: flex
+                height: fit-content
+                width: 300px
+                background: var(--color-bg-1)
+                flex-direction: column
+                padding: 10px
+                row-gap: 20px
+                .fbu-tables
+                    display: flex
+                    height: fit-content
+                    background-color: var(--color-bg-5)
+                    border-radius: 4px
+                    box-shadow: 0 8px 24px 2px rgba(29, 41, 57, .14)
+                    padding: 10px
+                    .fbu-tables-content
+                        height: 100%
+                        width: 100%
+                        color: var(--color-text-2)
+                        font-weight: bold
+                .fbu-fields
+                    display: flex
+                    height: fit-content
+                    background-color: var(--color-bg-5)
+                    border-radius: 4px
+                    box-shadow: 0 8px 24px 2px rgba(29, 41, 57, .14)
+                    padding: 10px
+                    .fbu-fields-content
+                        height: 100%
+                        width: 100%
+                        .fbu-fields-title
+                            display: flex
+                            width: 100%
+                            border-bottom: 1px solid var(--color-border-2)
+                            color: var(--color-text-2)
+                            font-weight: bold
+                        ul
+                            display: flex
+                            height: fit-content
+                            flex-direction: column
+                            list-style-type: none
+                            margin: 0%
+                            padding: 0%
+                            padding: 10px 0px
+                            li
+                                display: flex
+                                height: 40px
+                                width: 100%
+                                justify-content: space-between
+                        .arco-menu-item
+                            display: flex
+                            justify-content: space-between
+                            .is-linked-true
+                                color: crimson
+                                svg
+                                    stroke: crimson
+
+
+.arco-custom-btn-icon
+    .ant-btn-icon
+        svg
+            &.arco-icon
+                margin-right: 0px
+
+// custom table styling
+.rdt_TableHeadRow
+    background-color: #ececec !important
+
+
+.avif
+    margin: 0 auto
+.leftPane
+    height: auto
+    width: 50%
+.cardLogin
+    // border: 10px solid red
+    // background: red
+    // z-index: 20
+    // margin-top: -100px
+    width: auto
+    max-width: 1000px
+    // margin: 200px auto
+
+@media (max-width: 1240px) 
+    .graph-container
+        flex-direction: column
+        .arco-list-wrapper
+            &:first-child
+                width: 100%
+            &:last-child
+                width: 100%
+@media (min-width: 1300px)
+    .cardLogin
+        margin: auto 0px auto auto
+        // position: absolute
+        // right: 0
+        // top: 0
+@media (max-width:730px) 
+    .cardLogin
+        width: fit-content
+        margin: 0 auto
+
+    .holder
+        display: flex
+        flex-direction: column
+    .leftPane
+        width: 100%
+    
+//dashboard
+.logo
+    height: 100px
+    width: 100px
+    // border: 1px solid red
+    display: flex
+    align-items: center
+    justify-content: center
+    background-image: url("/images/logo.png")
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    border-radius: 50%
+    margin: 0 auto
+    // padding: 10px
+    // background-color: var(--color-bg-1)
+        
